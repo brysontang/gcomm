@@ -103,6 +103,10 @@ You can also use the Makefile to build and install the project.
 make dev
 ```
 
-License
+## 📄 License
 
 MIT
+
+## 💖 Acknowledgements
+
+Built with a lot of love and help from ChatGPT.
