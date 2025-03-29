@@ -58,6 +58,18 @@ Generate a commit message (copies to clipboard):
 gcomm
 ```
 
+Specify a different Ollama model (default is gemma3:latest):
+
+```bash
+gcomm --model codellama
+```
+
+Run git add . first:
+
+```bash
+gcomm --add
+```
+
 Generate, edit in your default editor, and commit:
 
 ```bash
@@ -68,12 +80,6 @@ Generate and commit immediately without editing:
 
 ```bash
 gcomm --yolo
-```
-
-Specify a different Ollama model (default is gemma3:latest):
-
-```bash
-gcomm --model codellama
 ```
 
 ## 🧩 Requirements
