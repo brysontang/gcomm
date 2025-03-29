@@ -30,18 +30,30 @@ cargo install --path .
 
 Now you can use gcomm from anywhere.
 
-🧠 Usage
+## 🧠 Usage
 
-Generate a commit message (and edit it):
+Generate a commit message (copies to clipboard):
 
 ```bash
 gcomm
 ```
 
-Generate and commit immediately:
+Generate, edit in your default editor, and commit:
+
+```bash
+gcomm --edit
+```
+
+Generate and commit immediately without editing:
 
 ```bash
 gcomm --commit
+```
+
+Specify a different Ollama model (default is gemma3:latest):
+
+```bash
+gcomm --model codellama
 ```
 
 This uses your staged changes only (like git diff --cached), so make sure you've staged what you want:
@@ -50,11 +62,12 @@ This uses your staged changes only (like git diff --cached), so make sure you've
 git add .
 ```
 
-🧩 Requirements
+## 🧩 Requirements
 
-Ollama running locally
-A model pulled (e.g. ollama run gemma3 or ollama run llama3)
-✨ Output Format
+- Ollama running locally
+- A model pulled (e.g. ollama run gemma3 or ollama run llama3)
+
+## ✨ Output Format
 
 Add analytics and fix layout issues
 

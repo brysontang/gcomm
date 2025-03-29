@@ -15,7 +15,7 @@ struct OllamaResponse {
 }
 
 fn build_system_prompt() -> &'static str {
-    r#"You are a commit message assistant. Your job is to write clear, structured Git commit messages based on a given diff.
+    r#"You are a commit message assistant. Your job is to write clear, structured Git commit messages based on a given diff. If a section is empty, don't include the section in the output.
 
 Use this format:
 
@@ -43,9 +43,6 @@ Added
 Changed
   - Renamed `userFlow` to `userJourney`
   - Updated settings panel layout
-
-Removed
-  - Deprecated `oldTracking.js`
 "#
 }
 
