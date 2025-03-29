@@ -60,6 +60,18 @@ pub fn query_ollama(diff: &str, model: &str) -> Result<String, Box<dyn std::erro
         })
         .send()?
         .json::<OllamaResponse>()?;
+    
+      let response = res.response.trim().to_string();
+      // Remove any non-breaking spaces (0xC2 0xA0) from the response
+      let response = response.replace("<0xC2><0xA0>", " ");
+      // Clean up any extra whitespace issues
+      let response = response
+          .replace("\t", " ")        // Replace tabs with spaces
+          .replace("  ", " ")        // Replace double spaces with single spaces
+          .lines()
+          .map(|line| line.trim())   // Trim whitespace from each line
+          .collect::<Vec<&str>>()
+          .join("\n");
 
-    Ok(res.response.trim().to_string())
+    Ok(response)
 }

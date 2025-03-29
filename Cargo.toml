@@ -1,11 +1,11 @@
 [package]
 name = "gcomm"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Bryson Tang <brysontang@gmail.com>"]
 description = "Generate AI-powered Git commit messages from staged changes using a local Ollama model."
 license = "MIT"
-repository = "https://github.com/bryson-tang/gcomm"
+repository = "https://github.com/brysontang/gcomm"
 readme = "README.md"
 keywords = ["git", "cli", "commit", "ai", "ollama"]
 categories = ["command-line-utilities", "development-tools"]
