@@ -13,6 +13,10 @@ use clap::Parser;
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args = Args::parse();
 
+    if args.add {
+        Command::new("git").args(["add", "."]).status()?;
+    }
+
     let staged_files = git::get_staged_files()?;
     let filtered_files: Vec<String> = staged_files
         .into_iter()

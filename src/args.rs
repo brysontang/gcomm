@@ -7,6 +7,10 @@ use clap::Parser;
     about = "Generate AI-powered Git commit messages from staged changes"
 )]
 pub struct Args {
+    /// Run git add . first
+    #[arg(long)]
+    pub add: bool,
+
     /// Model name to use with Ollama
     #[arg(short, long, default_value = "gemma3:latest")]
     pub model: String,
