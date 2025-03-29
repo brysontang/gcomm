@@ -8,13 +8,21 @@ This CLI tool analyzes staged Git changes and generates a structured commit mess
 
 ## 🚀 Getting Started
 
-### 1. Install Rust (if you haven't yet)
+### Install via cargo
+
+```bash
+cargo install gcomm
+```
+
+### Alternative: Build from source
+
+#### 1. Install Rust (if you haven't yet)
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-### 2. Clone and build the project
+#### 2. Clone and build the project
 
 ```bash
 git clone https://github.com/bryson-tang/gcomm
@@ -22,7 +30,7 @@ cd gcomm
 cargo build
 ```
 
-### 3. (Optional) Install globally
+#### 3. (Optional) Install globally
 
 ```bash
 cargo install --path .
