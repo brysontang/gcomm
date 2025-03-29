@@ -34,7 +34,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let message = ollama::query_ollama(&diff, &args.model)?;
     println!("\n💡 Suggested Commit Message:\n\n{}", message);
 
-    if args.commit {
+    if args.yolo {
         let status = Command::new("git")
             .args(["commit", "-m", &message])
             .status()?;

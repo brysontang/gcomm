@@ -67,7 +67,7 @@ gcomm --edit
 Generate and commit immediately without editing:
 
 ```bash
-gcomm --commit
+gcomm --yolo
 ```
 
 Specify a different Ollama model (default is gemma3:latest):

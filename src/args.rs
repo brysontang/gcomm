@@ -13,7 +13,7 @@ pub struct Args {
 
     /// Commit automatically without editing
     #[arg(long)]
-    pub commit: bool,
+    pub yolo: bool,
 
     // Open editor to edit commit message
     #[arg(long)]
