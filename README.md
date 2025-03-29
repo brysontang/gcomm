@@ -104,7 +104,6 @@ Changed
 Removed
 
 - Unused `tracking.js`
-  🛠 Dev Tip
 ```
 
 ## 📄 License
