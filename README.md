@@ -36,9 +36,21 @@ cargo build
 cargo install --path .
 ```
 
+Or add a shortcut:
+
+```bash
+alias gcomm="./target/debug/gcomm"
+```
+
 Now you can use gcomm from anywhere.
 
 ## 🧠 Usage
+
+This uses your staged changes only (like git diff --cached), so make sure you've staged what you want:
+
+```bash
+git add .
+```
 
 Generate a commit message (copies to clipboard):
 
@@ -64,19 +76,14 @@ Specify a different Ollama model (default is gemma3:latest):
 gcomm --model codellama
 ```
 
-This uses your staged changes only (like git diff --cached), so make sure you've staged what you want:
-
-```bash
-git add .
-```
-
 ## 🧩 Requirements
 
-- Ollama running locally
+- [Ollama](https://ollama.com) running locally
 - A model pulled (e.g. ollama run gemma3 or ollama run llama3)
 
 ## ✨ Output Format
 
+```
 Add analytics and fix layout issues
 
 Added
@@ -92,23 +99,6 @@ Removed
 
 - Unused `tracking.js`
   🛠 Dev Tip
-
-While developing, you can run it without installing globally:
-
-```bash
-cargo run
-```
-
-Or add a shortcut:
-
-```bash
-alias gcomm="./target/debug/gcomm"
-```
-
-You can also use the Makefile to build and install the project.
-
-```bash
-make dev
 ```
 
 ## 📄 License
